@@ -1,7 +1,3 @@
-# Include environment variables
-include .env
-export
-
 # Define variables for convenience
 IMAGE_NAME = flask-bmi-bmr
 PORT = 5000
