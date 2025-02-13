@@ -42,5 +42,5 @@ The **Health Calculator Microservice** is a Python application that provides hea
 
 ## Secrets
 
-**TOKEN** : To push and pull the docker image in the private registry
-**AZURE_WEBAPP_PUBLISH_PROFILE** : Allow github actions to deploy the app in Azure
+- **TOKEN** : To push and pull the docker image in the private registry
+- **AZURE_WEBAPP_PUBLISH_PROFILE** : Allow github actions to deploy the app in Azure
