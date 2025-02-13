@@ -30,7 +30,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ghcr.io
-          username: ${{ GITHUB_ACTOR }}
+          username: ${{ github.actor }}
           password: ${{ secrets.TOKEN }}
     
       - name: Build and push Docker image
@@ -38,11 +38,11 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ GITHUB_REPOSITORY }}:latest
+          tags: ghcr.io/${{ github.repository }}:latest
 
       # - name: Deploy to Azure Web App
       #   uses: azure/webapps-deploy@v3
       #   with:
       #     app-name: 'health-calculator-app'
       #     publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-      #     images: 'ghcr.io/${{ GITHUB_REPOSITORY }}:latest'
+      #     images: 'ghcr.io/${{ github.repository }}:latest'
