@@ -40,9 +40,9 @@ jobs:
           push: true
           tags: ghcr.io/toxma/health-calculator-service:latest
 
-      # - name: Deploy to Azure Web App
-      #   uses: azure/webapps-deploy@v3
-      #   with:
-      #     app-name: 'health-calculator-app'
-      #     publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-      #     images: 'ghcr.io/toxma/health-calculator-service:latest'
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: 'health-calculator-app'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: 'ghcr.io/toxma/health-calculator-service:latest'
